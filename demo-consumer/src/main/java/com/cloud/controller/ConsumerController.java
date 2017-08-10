@@ -25,8 +25,9 @@ public class ConsumerController {
         return computeService.addService();
     }
 
-    @RequestMapping({"/config_file"})
+    @RequestMapping(value = "/config_file", method = RequestMethod.GET)
     public String configFile() {
+        System.out.println(from);
         return from;
     }
 
